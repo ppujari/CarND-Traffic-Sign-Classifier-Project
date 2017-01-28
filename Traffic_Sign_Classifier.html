@@ -16306,7 +16306,9 @@ Number of test examples = 12630
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Answer:"><strong>Answer:</strong><a class="anchor-link" href="#Answer:">&#182;</a></h1><p>I followed the same apporach as given LeNet example.</p>
+<h1 id="Answer:"><strong>Answer:</strong><a class="anchor-link" href="#Answer:">&#182;</a></h1><p>In this architecture, I used both both convolutional network and fully connected network. In a convolutional layer each neuron share the same set of weights. This connection pattern only makes sense for cases where the data can be interpreted as spatial with the features to be extracted being spatially local, particularily helpful in image data. For example "nose" consists of a set of nearby pixels, not spread all across the image. In a fully connected layer each neuron is connected to every neuron in the previous layer, and each connection has it's own weight. This is a totally general purpose connection pattern.</p>
+<p>I did not use dropout as it did not improve accuracy. 
+Increasing number of layers helps to solve complex problems and helps parameter efficiency as I learned from tensorflow. Deep models capture heirarchical structure of the object. In lower layer, it can capture lines, when we move up the layer, it learns about bigger geaometric shapes and complex objects like face, Nose etc.</p>
 <h3 id="Architecture">Architecture<a class="anchor-link" href="#Architecture">&#182;</a></h3><p><strong>Layer 1: Convolutional.</strong> The output shape should be 28x28x6.</p>
 <p><strong>Activation.</strong> Your choice of activation function.</p>
 <p><strong>Pooling.</strong> The output shape should be 14x14x6.</p>
